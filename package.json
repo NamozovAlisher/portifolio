@@ -2,19 +2,27 @@
   "name": "alisher-portfolio",
   "version": "1.0.0",
   "description": "Full-stack portfolio website for Alisher Namozov",
+  "author": "Alisher Namozov",
+  "license": "MIT",
   "scripts": {
     "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
     "backend:dev": "cd backend && npm run dev",
     "frontend:dev": "cd frontend && npm run dev",
-    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+    
+    "build": "npm run backend:build && npm run frontend:build",
+    "backend:build": "cd backend && npm install && npm run build || echo 'No backend build script'",
+    "frontend:build": "cd frontend && npm install && npm run build",
+
+    "start": "cd backend && npm start",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "deploy": "node deploy.js",
+    "test:deploy": "node test-deployment.js"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  },
-  "author": "Alisher Namozov",
-  "license": "MIT",
   "dependencies": {
     "aos": "^2.3.4",
     "node-telegram-bot-api": "^0.66.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
