@@ -144,12 +144,12 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-secondary-300">
-                    📱 +998 XX XXX XX XX
+                    📱 +998 77 143 53 51
                   </p>
                 </div>
                 <div>
                   <p className="text-secondary-300">
-                    📍 Tashkent, Uzbekistan
+                    📍 Bukhara, Uzbekistan
                   </p>
                 </div>
               </div>
